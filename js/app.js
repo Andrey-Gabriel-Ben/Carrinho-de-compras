@@ -1,6 +1,6 @@
 var quantidadeGetID = document.getElementById("quantidade");
 var produtoGetID = document.getElementById("produto");
-var carrinhoGetID = document.getElementById("lista-produtos")
+var listaGetID = document.getElementById("lista-produtos")
 var valorDoCarrinho = [];
 
 function adicionar() {
@@ -11,18 +11,9 @@ function adicionar() {
 
     valorDoCarrinho.push(subtotal);
 
-    let total = somaTotal(valorDoCarrinho)
+    let total = somaTotal(valorDoCarrinho);
 
-
-    
-    console.log(produto)
-    console.log(quantidade)
-    console.log(valor)
-    console.log(subtotal)
-    console.log(valorDoCarrinho)
-    console.log(total)
-    console.log("******************")
-    
+    alterarListaProduto(quantidade, produto, valor);
 
 }
 
@@ -33,4 +24,7 @@ function somaTotal (arrayDeNumeros) {
     return ValorFinal;
 }
 
+function alterarListaProduto (Q, P, V) {
+    listaGetID.innerHTML += `<section class="carrinho__produtos__produto"> <span class="texto-azul">${Q}x</span> ${P} <span class="texto-azul">${V}</span> </section>`;
+}
 
