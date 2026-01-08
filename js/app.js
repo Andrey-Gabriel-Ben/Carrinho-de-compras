@@ -14,11 +14,23 @@ function adicionar() {
     
     let total = somaTotal(valorDoCarrinho);
 
-    alterarListaProduto(quantidade, produto, valor);
+    alterarListaProduto(quantidade + "x", produto, valor, false);
 
     alterarTotal(total);
     
-}
+};
+
+
+function limpar() {
+
+    valorDoCarrinho = [];
+
+    alterarTotal("");
+
+    alterarListaProduto(null, null, null, true);
+
+};
+
 
 function somaTotal (arrayDeNumeros) {
     let ValorFinal = arrayDeNumeros.reduce((acumulador, valorAtual) => {
@@ -27,8 +39,12 @@ function somaTotal (arrayDeNumeros) {
     return ValorFinal;
 }
 
-function alterarListaProduto (Q, P, V) {
-    listaGetID.innerHTML += `<section class="carrinho__produtos__produto"> <span class="texto-azul">${Q}x</span> ${P} <span class="texto-azul">${V}</span> </section>`;
+function alterarListaProduto (Q, P, V, limpar = false) {
+    if (limpar) {
+        listaGetID.innerHTML =`<section class="carrinho__produtos__produto"> <span class="texto-azul"></span>  <span class="texto-azul"></span> </section>`;
+    } else {
+        listaGetID.innerHTML +=`<section class="carrinho__produtos__produto"> <span class="texto-azul">${Q}</span> ${P} <span class="texto-azul">${V}</span> </section>`;
+    };
 };
 
 function alterarTotal (VT) {
