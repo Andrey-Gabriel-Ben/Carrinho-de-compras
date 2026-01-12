@@ -8,10 +8,10 @@ body {
   min-height: 100vh;
   height: auto;
   background: linear-gradient(to bottom,
-      #01080E 10%,
-      #FFF 10%,
-      #FFF 90%,
-      #01080E 90%);
+      #230432 10%,
+      #bca7e4 10%,
+      #bca7e4 90%,
+      #230432 90%);
   padding: 7vh 8vw 5vh;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
@@ -37,8 +37,8 @@ input[type="number"] {
     appearance: textfield;
 }
 
-.texto-medio-azul {
-  color: var(--Light-Blue, #1875E8);
+.texto-medio-roxo {
+  color: var(--Light-purple, #893fa0);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -46,9 +46,10 @@ input[type="number"] {
 }
 
 .conteudo-principal {
-  filter: drop-shadow(0px 0px 70px rgba(2, 189, 255, 0.40));
+  filter: drop-shadow(0px 0px 70px rgb(12, 53, 106));
   min-height: 100%;
   padding: 5rem 6.5rem;
+  border-radius: 2%;
   
   display: grid;
   grid-template-columns: 1.375fr 1fr;
@@ -61,11 +62,11 @@ input[type="number"] {
   background-position: left bottom -40px;
 }
 
-.grafismo-azul {
+.grafismo-roxo {
   position: absolute;
   width: 31.9375rem;
   height: 2.0625rem;
-  background-image: url('./assets/grafismo-azul.svg');
+  background-image: url('./assets/grafismo-roxo.svg');
   top: -1rem;
 }
 
@@ -78,8 +79,8 @@ input[type="number"] {
   margin-bottom: 2.5rem;
 }
 
-.texto-azul {
-  color: #1875E8;
+.texto-roxo {
+  color: #8313a5;
 }
 
 .formulario {
@@ -101,7 +102,7 @@ input[type="number"] {
   height: 3.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--Light-Blue, #1875E8);
+  border: 1px solid var(--Light-purple, #893fa0);
 
   color: var(--Void, #01080E);
   font-family: Inter;
@@ -121,7 +122,7 @@ input[type="number"] {
   align-items: center;
   gap: 0.625rem;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
-  border: 1px solid var(--Light-Blue, #1875E8);
+  border: 1px solid var(--Light-purple, #893fa0);
   cursor: pointer;
 }
 
@@ -137,7 +138,7 @@ input[type="number"] {
   padding: 1rem;
   width: 4.5rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--Light-Blue, #1875E8);
+  border: 1px solid var(--Light-purple, #893fa0);
 
   color: var(--Void, #01080E);
   font-family: Inter;
@@ -167,7 +168,7 @@ input[type="number"] {
 }
 
 .botao-adicionar {
-  background: var(--Light-Blue, #1875E8);
+  background: var(--Light-purple, #893fa0);
   box-shadow: 0px 0px 20px 0px rgba(24, 117, 232, 0.50);
 
   color: var(--Branco, #FFF);
@@ -178,7 +179,7 @@ input[type="number"] {
 
 .botao-limpar {
   border-radius: 1rem;
-  background: var(--Void, #01080E);
+  background: var(--Void, #070024);
   box-shadow: 0px 0px 20px 0px rgba(1, 8, 14, 0.50);
 
   color: var(--Branco, #FFF);
@@ -202,7 +203,7 @@ input[type="number"] {
 }
 
 .carrinho__titulo {
-  color: var(--Light-Blue, #1875E8);
+  color: var(--Light-purple, #893fa0);
   font-family: Inter;
   font-size: 1.5rem;
   font-style: normal;
