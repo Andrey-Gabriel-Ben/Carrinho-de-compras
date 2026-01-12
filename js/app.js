@@ -41,14 +41,14 @@ function somaTotal (arrayDeNumeros) {
 
 function alterarListaProduto (Q, P, V, limpar = false) {
     if (limpar) {
-        listaGetID.innerHTML =`<section class="carrinho__produtos__produto"> <span class="texto-azul"></span>  <span class="texto-azul"></span> </section>`;
+        listaGetID.innerHTML =`<section class="carrinho__produtos__produto"> <span class="texto-roxo"></span>  <span class="texto-roxo"></span> </section>`;
     } else {
-        listaGetID.innerHTML +=`<section class="carrinho__produtos__produto"> <span class="texto-azul">${Q}</span> ${P} <span class="texto-azul">${V}</span> </section>`;
+        listaGetID.innerHTML +=`<section class="carrinho__produtos__produto"> <span class="texto-roxo">${Q}</span> ${P} <span class="texto-roxo">${V}</span> </section>`;
     };
 };
 
 function alterarTotal (VT) {
-    totalGetid.innerHTML = `<span class="texto-azul" id="valor-total">${VT}</span>`;
+    totalGetid.innerHTML = `<span class="texto-roxo" id="valor-total">${VT}</span>`;
 };
 
 
