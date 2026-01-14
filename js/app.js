@@ -17,6 +17,8 @@ function adicionar() {
     alterarListaProduto(quantidade + "x", produto, valor, false);
 
     alterarTotal(total);
+
+    quantidadeGetID.value = "";
     
 };
 
@@ -37,7 +39,7 @@ function somaTotal (arrayDeNumeros) {
         return acumulador + valorAtual;
     }, 0);
     return ValorFinal;
-}
+};
 
 function alterarListaProduto (Q, P, V, limpar = false) {
     if (limpar) {
@@ -52,3 +54,4 @@ function alterarTotal (VT) {
 };
 
 
+// adicionar uma função que alerta quando algum dado não foi escolhido
