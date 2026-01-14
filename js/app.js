@@ -6,6 +6,12 @@ var valorDoCarrinho = [];
 
 function adicionar() {
     let quantidade = quantidadeGetID.value;
+
+    if (quantidade == "" || quantidade == 0) {
+        alert("Você não adicionou uma quantidade válida. Revise o valor escolhido e clique novamente.");
+        return
+    }
+
     let valor = parseInt(produtoGetID.value.match(/\d+/g));
     let produto = produtoGetID.value.replace(` - R$${valor}`, "");
     let subtotal = valor*quantidade;
@@ -52,6 +58,3 @@ function alterarListaProduto (Q, P, V, limpar = false) {
 function alterarTotal (VT) {
     totalGetid.innerHTML = `<span class="texto-roxo" id="valor-total">${VT}</span>`;
 };
-
-
-// adicionar uma função que alerta quando algum dado não foi escolhido
